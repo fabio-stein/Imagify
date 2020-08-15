@@ -16,6 +16,7 @@ namespace Imagify
             Directory.CreateDirectory("data");
             var data = File.ReadAllBytes("data/input.txt");
 
+            //Get necessary size to make it square
             var pixelsNeeded = (int)Math.Ceiling((double)data.Length / 3);
             var pixelCount = Util.getClosestPerfectSquare(pixelsNeeded);
 
